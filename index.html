@@ -1,1 +1,238 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <p>Welcome to my website</p>
+  </header>
+  <navbar>
+    <div>
+
+    </div>
+  </navbar>
+  <main>
+    <article>
+      <h3>Natural</h3>
+      <p>Natural resources (economically referred to as land or raw materials) 
+      occur naturally within environments that exist relatively undisturbed by 
+      mankind, in a natural form. A natural resource is often characterized by 
+      amounts of biodiversity existent in various ecosystems.</p>
+      Advance topic <acronym title="Cascading Style Sheet">CSS</acronym> is more flexible to useful.
+    </article>
+    <details open="open">
+      <summary>Click here</summary>
+      <p>Now a day Internet is very good option for learning. There are many advantages of this option.</p>
+    </details>
+    <p>This text are <em>Emphasize format.</em></p>
+
+    <fieldset>
+      <legend>Gender</legend>
+  
+      <input type="radio" name="gender" id="male" value="male" checked="checked"/>
+      <label for="male">Male</label>
+  
+      <input type="radio" name="gender" id="female" value="female"/>
+      <label for="female">Female</label>
+  
+    </fieldset>
+
+    <figure>
+      <img src="../../images/img_nat.png" width="165" height="110" alt="Natural" />
+      <figcaption>Figure 1. Natural Image</figcaption>
+    </figure>
+
+    <video controls="controls">
+      <source src="../../images/rolling_sample.mp4" type="video/mp4"/>
+      <track src="../../rolling_sample.vtt" kind="subtitles" srclang="en" label="English"/>
+      <p>Your browser does not support the &lt;video&gt; tag.</p>
+    </video>
+
+    <form action="/action_page.php">
+      <fieldset>
+       <legend>Personalia:</legend>
+       <label for="fname">First name:</label>
+       <input type="text" id="fname" name="fname"><br><br>
+       <label for="lname">Last name:</label>
+       <input type="text" id="lname" name="lname"><br><br>
+       <label for="email">Email:</label>
+       <input type="email" id="email" name="email"><br><br>
+       <label for="birthday">Birthday:</label>
+       <input type="date" id="birthday" name="birthday"><br><br>
+       <input type="submit" value="Submit">
+      </fieldset>
+     </form>
+
+     <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+     <p id="demo"></p>
+
+    <script>
+    document.getElementById("demo").innerHTML = 
+    "Screen width is " + screen.width;
+    </script>
+
+  <script>
+    function goBack() {
+      window.history.back()
+    }
+  </script>
+  <input type="button" value="Back" onclick="goBack()">
+
+
+  <p id="demo2"></p>
+
+  <script>
+  document.getElementById("demo2").innerHTML =
+  "cookiesEnabled is " + navigator.cookieEnabled;
+  </script>
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML =
+"navigator.appCodeName is " + navigator.appCodeName;
+</script>
+
+
+<p id="demo4"></p>
+
+<p>Strange enough, "Netscape" is the application name for IE11, Chrome, Firefox, and Safari.</p>
+
+<script>
+document.getElementById("demo4").innerHTML = 
+"navigator.appName is " + navigator.appName;
+</script>
+
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo5"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo5").innerHTML = text;
+}
+</script>
+<script>
+  function setCookie(cname,cvalue,exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  
+  function checkCookie() {
+    let user = getCookie("username");
+    if (user != "") {
+      alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+         setCookie("username", user, 30);
+       }
+    }
+  }
+  </script>
+
+<p id="demo8"></p>
+
+<script>
+localStorage.setItem("name","John Doe");
+document.getElementById("demo8").innerHTML = localStorage.getItem("name");
+</script>
+<h2>JavaScript Web Workers API</h2>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<script>
+let w;
+
+function startWorker() {
+  if(typeof(w) == "undefined") {
+    w = new Worker("demo_workers.js");
+  }
+  w.onmessage = function(event) {
+    document.getElementById("result").innerHTML = event.data;
+  };
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
+
+<h2>JavaScript Geolocation API</h2>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo9"></p>
+
+<script>
+const x = document.getElementById("demo9");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<audio controls src="audio.mp3"></audio>
+
+<!-- Multiple audio formats -->
+<audio controls>
+  <source src="audio.mp3">
+  <source src="audio.ogg">
+  <source src="audio.wav">
+</audio>
+  </main>
+  <footer>
+    <address>
+      paniekolegoprojekt@gmail.com<br />
+      erykrozdolski@gmail.com<br />
+      +48 664193740<br />
+    </address>
+  </footer>
+</body>
+</html>
