@@ -10,6 +10,11 @@
 }
 
 @font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('static/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
   font-family: 'Montserrat-Thin';
   src: url('static/fonts/Montserrat-Thin.ttf');
 }
@@ -47,7 +52,8 @@ ul {
 }
 
 p {
-  line-height: 2em;
+  line-height: 150%;
+  color: #333;
 }
 
 address {
@@ -58,7 +64,8 @@ address {
 
 h1 {
   font-size: 64px;
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Medium';
+  margin: 1rem 0;
 }
 
 
@@ -66,10 +73,42 @@ h1 {
   width: clamp(100px, 10vw, 250px);
 }
 
-video {
-  width: clamp(500px, 30vw, 720px)
-}
 
 a {
   color: black;
+}
+
+.introLogo {
+  display: flex;
+  flex-flow: column;
+  color: white;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.introLogo span {
+  background: black;
+  width: fit-content;
+  font-size: 24px;
+}
+
+.tagList {
+  display: flex;
+  list-style: none;
+  margin: unset;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tagList li {
+  background: black;
+  color: white;
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
+.videoList {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
