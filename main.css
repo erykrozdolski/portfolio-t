@@ -33,6 +33,7 @@ h1 {
   background: black;
   width: fit-content;
   font-size: 24px;
+  padding: 2px;
 }
 
 .tagList {
@@ -53,19 +54,22 @@ h1 {
   font-weight: 700;
   border: 1px solid black;
   border-radius: 2px;
+  transition: all 0.25s;
+}
+
+.tagList li:hover {
+  background: black;
+  color: white;
+  cursor: none;
 }
 
 article {
   margin: 10% 25%;
 }
 
-.contact__button {
-  color: black;
-  font-size: 1rem;
-}
-
 .mail {
   font-weight: 700;
+  line-height:0;
 }
 
 @media only screen and (max-width: 1000px) {
