@@ -1,89 +1,32 @@
 
-@font-face {
-  font-family: 'Montserrat-Regular';
-  src: url('static/fonts/Montserrat-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Montserrat-Bold';
-  src: url('static/fonts/Montserrat-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Montserrat-Medium';
-  src: url('static/fonts/Montserrat-Medium.ttf');
-}
-
-@font-face {
-  font-family: 'Montserrat-Thin';
-  src: url('static/fonts/Montserrat-Thin.ttf');
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Rubik&display=swap');
 
 body {
   margin: unset;
   font-size: 24px;
-  font-family: 'Montserrat-Regular';
-}
-
-main, footer, nav {
-  margin: auto;
-  max-width: 1200px;
-  padding: 1rem;
-}
-
-nav {
-  display: flex;
-  padding: unset;
-  justify-content: space-between;
-  max-width: 100%;
-}
-
-nav li {
-  display: inline-block;
-  font-size: 1rem;
-  padding: 1rem;
-  font-size: 24px;
-}
-
-ul {
-  padding: unset;
-  margin: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 p {
   line-height: 150%;
-  color: #333;
+  color: black;
+  font-size: 1rem;
 }
 
-address {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-}
 
 h1 {
-  font-size: 64px;
-  font-family: 'Montserrat-Medium';
-  margin: 1rem 0;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
-
-.logo {
-  width: clamp(100px, 10vw, 250px);
-}
-
-
-a {
-  color: black;
-}
 
 .introLogo {
   display: flex;
   flex-flow: column;
   color: white;
   gap: 0.5rem;
-  padding: 1rem;
 }
 
 .introLogo span {
@@ -99,16 +42,34 @@ a {
   gap: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  padding: unset;
 }
 
 .tagList li {
-  background: black;
-  color: white;
-  padding: 0.25rem;
+  background: white;
+  color: black;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+article {
+  margin: 10% 25%;
+}
+
+.contact__button {
+  color: black;
   font-size: 1rem;
 }
 
-.videoList {
-  display: grid;
-  grid-template-columns: auto auto auto;
+.mail {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1000px) {
+  article {
+    margin: 2rem;
+  }
 }
