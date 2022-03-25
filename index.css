@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Rubik&display=swap');
+
+body {
+  margin: unset;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+p {
+  line-height: 150%;
+  color: black;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+
+h1 {
+  font-size: clamp(24px, 10vw, 5rem);
+  margin: unset;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.introLogo span {
+  background: black;
+  color: white;
+  width: fit-content;
+  font-size: 24px;
+  padding: 2px;
+}
+
+.tagList {
+  display: flex;
+  list-style: none;
+  margin: unset;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  padding: unset;
+}
+
+.tagList li {
+  background: black;
+  color: white;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  border: 1px solid black;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+.tagList li:hover {
+  background: black;
+  color: white;
+  cursor: none;
+}
+
+@keyframes disturb {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+article {
+  margin: 5% clamp(1rem,25%, 500px);
+  animation: disturb 360s infinite;
+}
+
+footer {
+  font-size: 0.75rem;
+  display:flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px) {
+  article {
+    margin: 2rem;
+  }
+}

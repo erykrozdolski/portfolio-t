@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Rubik&display=swap');
+
+body {
+  margin: unset;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+p {
+  line-height: 150%;
+  color: black;
+  font-size: 1.25rem;
+}
+
+
+h1 {
+  font-size: 3rem;
+  margin: unset;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+main {
+  margin: 2rem clamp(1rem, 10vw, 5rem)
+}
+.links {
+  display: grid;
+  gap: 2rem;
+}
