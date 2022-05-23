@@ -3,7 +3,7 @@
 
 body {
   margin: unset;
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -16,7 +16,7 @@ p {
 
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.5rem;
   margin: unset;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -26,7 +26,18 @@ h1 {
 main {
   margin: 2rem clamp(1rem, 10vw, 5rem)
 }
+
+
+@media only screen and (max-width: 1000px) {
+  main {
+    margin: 1rem;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
 .links {
   display: grid;
-  gap: 2rem;
+  gap: 1.25rem;
 }
